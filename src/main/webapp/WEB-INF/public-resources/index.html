@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr" ng-app="sampleWeb">
+<head>
+    <title>샘플 페이지</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/tmon.ico">
+
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.min.js"></script>
+    <script src="lib/angular-aria/angular-aria.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
+    <script src="lib/angular-material/angular-material.min.js"></script>
+    <link rel="stylesheet" href="lib/angular-material/angular-material.min.css"/>
+
+    <script src="app/app.js"></script>
+</head>
+<body ng-controller="MainController">
+<form name="dealSerialsForm">
+    <md-input-container>
+        <label>딜 번호</label>
+        <input name="dealSerials" ng-model="dealSerials" type="text" ng-required="true">
+
+        <div ng-messages="dealSerialsForm.dealSerials.$error">
+            <div ng-message="required">딜 번호 목록을 입력해주세</div>
+        </div>
+    </md-input-container>
+
+    <md-button ng-click="confirm(dealSerials)" ng-disabled="dealSerialsForm.dealSerials.$error.required"
+               aria-label="Confirm">
+        확인
+    </md-button>
+</form>
+{{dealList}}
+
+</body>
+</html>

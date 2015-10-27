@@ -1,0 +1,22 @@
+{
+  "name": "sample-web",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "install": {
+    "path": {
+      "js": "src/main/webapp/WEB-INF/public-resources/lib/js",
+      "css": "src/main/webapp/WEB-INF/public-resources/lib/css"
+    }
+  },
+  "dependencies": {
+    "angular": "angularjs#~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-route": "~1.4.7",
+    "angular-messages": "~1.4.7",
+    "jquery": "~2.1.4"
+  }
+}

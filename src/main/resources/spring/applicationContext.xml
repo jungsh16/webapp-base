@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/mvc
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <mvc:resources
+            mapping="/static/**"
+            location="/WEB-INF/public-resources/"
+            cache-period="31556926"/>
+
+    <mvc:resources
+            mapping="/lib/**"
+            location="/WEB-INF/public-resources/lib/"
+            cache-period="31556926"/>
+
+    <mvc:resources
+            mapping="/img/**"
+            location="/WEB-INF/public-resources/img/"
+            cache-period="31556926"/>
+
+    <mvc:resources
+            mapping="/app/**"
+            location="/WEB-INF/public-resources/app/"
+            cache-period="31556926"/>
+
+    <context:component-scan base-package="com.tmoncorp.data.sample"/>
+    <mvc:annotation-driven/>
+</beans>
